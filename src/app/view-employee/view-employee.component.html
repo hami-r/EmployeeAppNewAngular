@@ -1,0 +1,33 @@
+
+<div class="container">
+    <div class="row ">
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <table class="table table-striped text-center mt-3">
+                <thead>
+                    <tr>
+                        <th>Employee Code</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Salary</th>
+                        <th>Mobile No</th>
+                        <th>Company Name</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of employees">
+                        <td>{{i.employeeCode}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.designation}}</td>
+                        <td>{{i.salary}}</td>
+                        <td>{{i.mobileNo}}</td>
+                        <td>{{i.companyName}}</td>
+                        <td>{{i.username}}</td>
+                        <td>{{i.password}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 
