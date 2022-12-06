@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
@@ -13,6 +14,10 @@ let myRoutes:Routes = [
   {
     path:"",
     component:AddEmployeeComponent
+  },
+  {
+    path:"view",
+    component:ViewEmployeeComponent
   }
   
 ]
@@ -28,7 +33,8 @@ let myRoutes:Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRoutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
