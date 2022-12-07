@@ -19,6 +19,10 @@ let myRoutes:Routes = [
   {
     path:"view",
     component:ViewEmployeeComponent
+  },
+  {
+    path:"search",
+    component:SearchEmployeeComponent
   }
   
 ]
