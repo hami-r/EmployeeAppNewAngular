@@ -32,6 +32,8 @@ export class AddEmployeeComponent {
     console.log(employee);
     this.api.addEmployee(employee).subscribe(
       (response:any) => {
+        console.log(response);
+        
         if(response.status=="success"){
           alert("added successfully")
           this.employeeCode = ""
