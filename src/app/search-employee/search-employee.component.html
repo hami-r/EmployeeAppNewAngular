@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 m-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Employee Code</label>
+                    <input name="employeeCode" [(ngModel)]="employeeCode" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="searchEmployee()" class="btn btn-success">Search</button>
+                </div>
+            </div>
+            <div class="row g-2" *ngFor="let i of searchData">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Name</label>
+                    <input type="text" class="form-control"  value="{{i.name}}" readonly>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Designation</label>
+                    <input type="text" class="form-control" value="{{i.designation}}" readonly>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Salary</label>
+                    <input type="text" class="form-control" value="{{i.salary}}" readonly>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Company Name</label>
+                    <input type="text" class="form-control" value="{{i.companyName}}" readonly>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Mobile No</label>
+                    <input type="text" class="form-control" value="{{i.mobileNo}}" readonly>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Username</label>
+                    <input type="text" class="form-control" value="{{i.username}}" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

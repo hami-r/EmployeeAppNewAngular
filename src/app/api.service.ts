@@ -15,4 +15,8 @@ export class ApiService {
   fetchEmployee = () => {
     return this.http.get("http://localhost:8080/view")
   }
+
+  searchEmployee = (dataToSend:any) => {
+    return this.http.post("http://localhost:8080/search",dataToSend)
+  }
 }
