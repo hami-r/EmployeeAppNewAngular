@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./search-employee.component.css']
 })
 export class SearchEmployeeComponent {
-  constructor(private api:ApiService) {}
+  constructor(private api:ApiService,private route:Router) {}
   employeeCode = ""
   searchData:any = []
   searchEmployee = () => {
@@ -26,6 +27,20 @@ export class SearchEmployeeComponent {
         
       }
     )
-    
+  }
+
+  deleteBtn = (id:any) => {
+    let data:any = {
+      "id":id
+    }
+    this.api.deleteEmployee(data).subscribe(
+      (response:any) => {
+        console.log(response);
+        if(response.status=="success"){
+          alert("deleted successfully")
+          this.route.navigate(['/search'])
+        }
+      }
+    )
   }
 }
